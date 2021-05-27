@@ -5,9 +5,9 @@ FROM python:slim-buster
 WORKDIR /app
 
 RUN apt-get update
-RUN apt-get install -y libgl1-mesa-dev
-RUN pip install Flask
-RUN pip install opencv-python
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN pip3 install Flask
+RUN pip3 install opencv-python
 
 COPY . .
 
