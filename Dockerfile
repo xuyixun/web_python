@@ -5,7 +5,7 @@ FROM python:alpine
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r requirements.txt
+RUN pip install -i https://pypi.doubanio.com/simple/ --no-cache-dir -r requirements.txt
 
 COPY . .
 
