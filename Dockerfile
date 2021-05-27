@@ -5,7 +5,7 @@ FROM python:slim-buster
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
-RUN pip install -i https://pypi.doubanio.com/simple/ --no-cache-dir -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY . .
 
