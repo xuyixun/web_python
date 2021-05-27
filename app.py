@@ -9,7 +9,7 @@ def hello_world():
     #convert string data to numpy array
     image_np = numpy.fromstring(image_flask, numpy.uint8)
     # convert numpy array to image
-    image_cv2 = cv2.imdecode(image_np, cv2.CV_LOAD_IMAGE_UNCHANGED)
+    image_cv2 = cv2.imdecode(image_np, cv2.IMREAD_UNCHANGED)
      # 先將圖片轉為灰階
     image_gray = cv2.cvtColor(image_cv2, cv2.COLOR_BGR2GRAY) 
     # 將圖片做模糊化，可以降噪
