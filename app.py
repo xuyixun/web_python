@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def hello_world():
-    image_flask = request.files['file']
+    image_flask = request.files['file'].read()
     #convert string data to numpy array
     image_np = numpy.fromstring(image_flask, numpy.uint8)
     # convert numpy array to image
