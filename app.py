@@ -15,6 +15,6 @@ def hello_world():
     # 將圖片做模糊化，可以降噪
     image_blur = cv2.medianBlur(image_gray,5) 
     # 一般圖二值化(有模糊降噪)
-    image_binary = cv2.threshold(image_blur,100,255,cv2.THRESH_BINARY)
+    ret,image_binary = cv2.threshold(image_blur,100,255,cv2.THRESH_BINARY)
     cv2.imwrite('test.png', image_binary)
     return 'Hello, Docker!'
