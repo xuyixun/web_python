@@ -32,7 +32,7 @@ def imageShow(filename):
 
 
 def imageSub(image, name, hbr, her, wbr, wer):
-    hight, width, t = image.shape
-    imageSub = image[hight*hbr:hight*her, width *
-                     wbr:width*wer]  # 裁剪坐标为[y0:y1, x0:x1]
+    hight, width = image.shape
+    imageSub = image[int(hight*hbr):int(hight*her), int(width *
+                     wbr):int(width*wer)]  # 裁剪坐标为[y0:y1, x0:x1]
     cv2.imwrite(name, imageSub)
